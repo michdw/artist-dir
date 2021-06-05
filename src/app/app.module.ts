@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ArtistItemsComponent } from './artist-items/artist-items.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArtistItemsComponent
   ],
   imports: [
     BrowserModule,
