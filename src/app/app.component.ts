@@ -10,15 +10,17 @@ import { HttpClient } from '@angular/common/http'
 export class AppComponent implements OnInit {
   query: string;
   artists: any[];
+  currentArtist: object;
 
-  showArtist(item: any) {
+  showArtist(item: any, artists: any) {
     this.query = item.name;
-    item.highlight = !item.highlight
+    this.currentArtist = item;
   }
 
   constructor(private http: HttpClient) {
     this.query = '';
     this.artists = [];
+    this.currentArtist = {};
   }
 
   ngOnInit(): void {
